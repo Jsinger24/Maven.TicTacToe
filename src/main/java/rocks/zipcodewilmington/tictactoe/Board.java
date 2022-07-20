@@ -54,10 +54,29 @@ public class Board {
     }
 
     public Boolean isTie() {
+        if(matrix[])
         return null;
     }
 
     public String getWinner() {
+        if(matrix[0][0] == 'X' && matrix[1][0] == 'X' && matrix[2][0] == 'X'){
+            return "X";
+        } else if (matrix[0][1] == 'O' && matrix[1][1] == 'O' && matrix[2][1] == 'O'){
+            return "O";
+        } else if (matrix[0][2] == 'X' && matrix[1][2] == 'X' && matrix[2][2] == 'X'){
+            return "X";
+        } else if (matrix[0][0] == 'O' && matrix[1][1] == 'O' && matrix[2][2] == 'O'){
+            return "O";
+        } else if (matrix[2][0] == 'X' && matrix[1][1] == 'X' && matrix[0][2] == 'X'){
+            return "X";
+        } else if (matrix[0][0] == 'O' && matrix[0][1] == 'O' && matrix[0][2] == 'O'){
+            return "O";
+        } else if (matrix[1][0] == 'X' && matrix[1][1] == 'X' && matrix[1][2] == 'X'){
+            return "X";
+        } else if (matrix[2][0] == 'O' && matrix[2][1] == 'O' && matrix[2][2] == 'O'){
+            return "O";
+
+        }
         return null;
     }
 
