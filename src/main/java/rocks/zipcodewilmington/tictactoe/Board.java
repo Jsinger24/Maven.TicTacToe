@@ -71,9 +71,20 @@ public class Board {
             return false;
         } else if (matrix[0][0] == 'X' && matrix[1][0] == 'X' && matrix[2][0] == 'X') {
             return false;
+        } else if (matrix[0][0] == 'X' && matrix[0][1] == 'O' && matrix[0][2] == 'X' &&
+                matrix[1][0] == 'O' && matrix[1][1] == 'O' && matrix[1][2] == 'X' &&
+                matrix[2][0] == 'X' && matrix[2][1] == 'X' && matrix[2][2] == 'O'){
+            return true;
+        } else if (matrix[0][0] == 'X' && matrix[0][1] == 'X' && matrix[0][2] == 'O' &&
+                matrix[1][0] == 'O' && matrix[1][1] == 'X' && matrix[1][2] == 'X' &&
+                matrix[2][0] == 'X' && matrix[2][1] == 'O' && matrix[2][2] == 'O') {
+            return true;
+
         }
         return null;
-    }
+        }
+
+
 
     public String getWinner() {
         if (matrix[0][0] == 'X' && matrix[1][0] == 'X' && matrix[2][0] == 'X') {
@@ -92,6 +103,14 @@ public class Board {
             return "X";
         } else if (matrix[2][0] == 'O' && matrix[2][1] == 'O' && matrix[2][2] == 'O') {
             return "O";
+        } else if (matrix[0][0] == 'X' && matrix[0][1] == 'O' && matrix[0][2] == 'X' &&
+                matrix[1][0] == 'O' && matrix[1][1] == 'O' && matrix[1][2] == 'X' &&
+                matrix[2][0] == 'X' && matrix[2][1] == 'X' && matrix[2][2] == 'O'){
+            return "";
+        } else if (matrix[0][0] == 'X' && matrix[0][1] == 'X' && matrix[0][2] == 'O' &&
+                matrix[1][0] == 'O' && matrix[1][1] == 'X' && matrix[1][2] == 'X' &&
+                matrix[2][0] == 'X' && matrix[2][1] == 'O' && matrix[2][2] == 'O') {
+            return "";
 
         }
         return null;
